@@ -8,6 +8,7 @@ import {
   EventCard,
   Subtitle,
 } from "./styles";
+import API_URLS from "../../config/api";
 
 export default function Eventos() {
   const location = useLocation();
@@ -25,7 +26,7 @@ export default function Eventos() {
         setCarregando(true);
         setErro(null);
 
-        const response = await fetch("http://localhost:5000/api/eventos");
+        const response = await fetch(API_URLS.EVENTOS);
 
         if (!response.ok) {
           throw new Error(`Erro ${response.status}: ${response.statusText}`);

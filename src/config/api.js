@@ -15,6 +15,7 @@ const API_URLS = {
   CIDADES: `${API_BASE}/api/cidades`,
 
   EVENTOS: `${API_BASE}/api/eventos`,
+  EVENTOS_POR_CIDADE: (cidade) => `${API_BASE}/api/eventos/cidade/${cidade}`,
 };
 
 export default API_URLS;
